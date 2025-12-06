@@ -1,0 +1,18 @@
+this json file show the policy of static website hosting
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::<Bucket-Name>/*"
+            ]
+        }
+    ]
+}
