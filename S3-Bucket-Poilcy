@@ -1,4 +1,4 @@
-this JSON is for only root user and one IAM user can see buckets
+ this JSON is for only root user and one IAM user can see buckets
 
 {
     "Version": "2012-10-17",
