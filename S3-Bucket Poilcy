@@ -1,0 +1,25 @@
+this JSON is for only root user and one IAM user can see buckets
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Statement1",
+            "Effect": "Deny",
+            "Principal": "*",
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::bucket name", 
+                "arn:aws:s3:::bucket name/*"
+            ],
+            "Condition": {
+                "StringNotEquals": {
+                    "aws:PrincipalArn": [
+                        "arn:aws:iam::AWS-ID:root",
+                        "arn:aws:iam::AWS-ID:user/username"
+                    ]
+                }
+            }
+        }
+    ]
+}
