@@ -1,0 +1,20 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Statement1",
+            "Effect": "Deny",
+            "Principal": "*",
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::demo-s3-bucket-hema",
+                "arn:aws:s3:::demo-s3-bucket-hema/*"
+            ],
+            "Condition": {
+                "StringNotEquals": {
+                    "aws:PrincipalArn":"arn:aws:iam::891376937338:root"
+                }
+            }
+        }
+    ]
+}
